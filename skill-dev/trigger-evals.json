@@ -1,0 +1,154 @@
+[
+  {
+    "query": "we're about to ship our payments microservice on friday. can you go through the repo (services/payments, go + postgres) and tell me everything that could bite us in prod — security holes, missing error handling, race conditions, whatever. assume it's broken until proven otherwise",
+    "should_trigger": true
+  },
+  {
+    "query": "here's our Series A data room, ~40 files in /dropbox/DD. before we send it to the VC's lawyers I want someone to comb through for anything embarrassing or inconsistent: contradictory numbers across the deck and the model, missing disclosures, metadata leaks in the PDFs",
+    "should_trigger": true
+  },
+  {
+    "query": "I wrote a spec for our new auth flow (auth-spec-v3.md). can you tear it apart? looking for gaps, ambiguous requirements, edge cases I didn't cover, anything a hostile reviewer would call out",
+    "should_trigger": true
+  },
+  {
+    "query": "can you fact-check this market report before we publish? it's got claims about 2026 EV battery costs and some stock price targets — want every number to have a real source and the methodology to hold up",
+    "should_trigger": true
+  },
+  {
+    "query": "review our terraform for the prod AWS account — worried about public S3 buckets, over-broad IAM, secrets in plaintext, no encryption. give me findings by severity",
+    "should_trigger": true
+  },
+  {
+    "query": "our equity research desk is putting out a BUY note on a small-cap. compliance wants it checked for conflicts disclosure, reasonable basis, and whether the DCF assumptions are defensible. what standards apply and does it pass?",
+    "should_trigger": true
+  },
+  {
+    "query": "is this clinical-trial data analysis reproducible? someone needs to independently verify the stats (lots of t-tests, worried about p-hacking) and check the audit trail before submission",
+    "should_trigger": true
+  },
+  {
+    "query": "go through this 80-page vendor contract and flag the risky clauses — indemnity, liability caps, auto-renewal, IP assignment, data protection. red/amber/green please",
+    "should_trigger": true
+  },
+  {
+    "query": "I think there are inconsistencies in our internal standards doc — cross-references that don't resolve, terms used two ways, a stale version number. can you do a thorough consistency pass?",
+    "should_trigger": true
+  },
+  {
+    "query": "we trained an LLM-based support agent. before launch I want an adversarial review: prompt injection, data leakage, hallucination on refunds/policy, excessive tool permissions. produce a risk writeup",
+    "should_trigger": true
+  },
+  {
+    "query": "write me a go microservice for handling payments with postgres",
+    "should_trigger": false
+  },
+  {
+    "query": "build a terraform module for an S3 bucket with encryption enabled",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the current price of NVDA and how's it moved this week?",
+    "should_trigger": false
+  },
+  {
+    "query": "log a 2400 rupee expense for client lunch under business meals",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize this 80-page vendor contract in a few bullet points for my boss",
+    "should_trigger": false
+  },
+  {
+    "query": "draft an equity research note with a BUY thesis on this small-cap, about 2 pages",
+    "should_trigger": false
+  },
+  {
+    "query": "fix the failing unit test in test_payments.py — it's a null pointer on line 42",
+    "should_trigger": false
+  },
+  {
+    "query": "convert auth-spec-v3.md into a nice PDF with our letterhead",
+    "should_trigger": false
+  },
+  {
+    "query": "generate my monthly financial report — income vs expenses and net worth",
+    "should_trigger": false
+  },
+  {
+    "query": "explain how the STRIDE threat modeling method works",
+    "should_trigger": false
+  },
+  {
+    "query": "we got a SOC 2 report from a vendor; tell me whether their controls are actually adequate or where the gaps are we should push back on",
+    "should_trigger": true
+  },
+  {
+    "query": "review this pull request before I merge it — correctness, security, edge cases, anything that'll break in prod",
+    "should_trigger": true
+  },
+  {
+    "query": "is our privacy policy actually compliant with India's DPDP Act, or are we exposed? walk through it clause by clause",
+    "should_trigger": true
+  },
+  {
+    "query": "I've got the board deck we presented and the actual numbers — check whether what we reported to the board matches reality",
+    "should_trigger": true
+  },
+  {
+    "query": "our data science team built a credit-scoring model; before it goes live I need an independent validation — bias, stability, documentation, the works",
+    "should_trigger": true
+  },
+  {
+    "query": "go through our React app for accessibility problems before launch — WCAG issues, keyboard traps, contrast",
+    "should_trigger": true
+  },
+  {
+    "query": "pressure-test the financial model tab in this pitch deck — are the unit economics internally consistent and do the formulas compute?",
+    "should_trigger": true
+  },
+  {
+    "query": "audit our draft 10-Q — do the revenue and EPS figures tie out to the underlying ledgers before we file?",
+    "should_trigger": true
+  },
+  {
+    "query": "verify the numbers in this published market report against their cited sources",
+    "should_trigger": true
+  },
+  {
+    "query": "help me make this blog post punchier and fix the flow",
+    "should_trigger": false
+  },
+  {
+    "query": "proofread this email for typos before I hit send",
+    "should_trigger": false
+  },
+  {
+    "query": "compare these two laptops and tell me which one I should buy",
+    "should_trigger": false
+  },
+  {
+    "query": "what are the OWASP Top 10 categories?",
+    "should_trigger": false
+  },
+  {
+    "query": "reconcile my bank statement against my expense log for last month",
+    "should_trigger": false
+  },
+  {
+    "query": "set up CI to run our tests on every pull request",
+    "should_trigger": false
+  },
+  {
+    "query": "rate my startup idea — is it any good?",
+    "should_trigger": false
+  },
+  {
+    "query": "log my last 5 UPI transactions and tell me my balance",
+    "should_trigger": false
+  },
+  {
+    "query": "categorize my credit-card expenses for last month and flag anything over budget",
+    "should_trigger": false
+  }
+]

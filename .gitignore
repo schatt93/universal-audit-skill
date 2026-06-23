@@ -1,0 +1,15 @@
+# Session / agent scratch
+.remember/
+*.tmp
+*.log
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc

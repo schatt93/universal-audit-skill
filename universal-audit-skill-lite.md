@@ -1,6 +1,6 @@
 # Universal Audit — Lite Edition (low-context / local models)
 
-> **This is an index + minimal operating core — NOT a replacement for the full spec.** The authoritative methodology (the detailed method, techniques, methods/standards, and edge cases for every stage, pass, and module) lives in **`universal-audit-skill-v8.0.md`**. The summaries below are deliberately compressed and **will omit specifics**. Whenever you are about to *execute* a stage, pass, or module — and context allows — **open the corresponding full section in the master and follow that**. Do not rely on the Lite text alone, or you will miss key instructions.
+> **This is an index + minimal operating core — NOT a replacement for the full spec.** The authoritative methodology (the detailed method, techniques, methods/standards, and edge cases for every stage, pass, and module) lives in **`universal-audit-skill-v9.0.md`**. The summaries below are deliberately compressed and **will omit specifics**. Whenever you are about to *execute* a stage, pass, or module — and context allows — **open the corresponding full section in the master and follow that**. Do not rely on the Lite text alone, or you will miss key instructions.
 
 ## Progressive disclosure — pull full detail on demand
 Load the **smallest relevant slice** of the master, use it, then release it and move on:
@@ -15,8 +15,9 @@ Load the **smallest relevant slice** of the master, use it, then release it and 
 | Severity / status / tags | §4 |
 | The output record + schema | §5 |
 | Standards to cite for a fix | Appendix — Standards & Methods Catalog |
+| Researching a current edition / advisory / CVE | **Stage R** + `research/research-workflow.md` |
 
-If you **cannot** open the master (no file, no fetch): say so, run only what this core supports, and tag anything you could not verify `UNVERIFIED` — never guess at the omitted detail. The master is at `universal-audit-skill-v8.0.md` or https://github.com/schatt93/universal-audit-skill .
+If you **cannot** open the master (no file, no fetch): say so, run only what this core supports, and tag anything you could not verify `UNVERIFIED` — never guess at the omitted detail. The master is at `universal-audit-skill-v9.0.md` or https://github.com/schatt93/universal-audit-skill .
 
 ## Running with little context
 - **Depth: Lightweight.** Work in **chunks** — one file / section / module at a time.
@@ -36,6 +37,7 @@ If you **cannot** open the master (no file, no fetch): say so, run only what thi
 
 ## Stages (full method in master §3)
 - **A** Scope & inventory → **verify each artifact's assumptions/baseline against the actual current state (P9)** → select only the relevant modules (record why) → confirm depth.
+- **R** **Deep research & currency** — decompose the audit's knowledge needs -> iterative fan-out web search -> verify sources -> synthesize a cited **Research Brief** (`audits/AUDIT-RUN-<NNN>-research.md`); assert time-sensitive facts only from the Brief, never memory. Loop: `research/research-workflow.md`.
 - **B** Passes **B1** Correctness · **B2** Completeness · **B3** Consistency — each in a constructive AND an adversarial mode; **B4** cross-cutting red-team.
 - **C** Run only the selected modules.
 - **D** Consolidate, classify severity, false-positive pass, **"Audit of the Audit"**.

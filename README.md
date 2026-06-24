@@ -13,6 +13,7 @@ Written in the spirit of **IEEE 1028** and **ISO 19011:2018**: adversarial towar
 - **9 operating principles** — including runtime validation of *external* facts (P1) and of the artifact's own preconditions / baseline against the *actual system* (**P9 — ground-truth reconciliation**, so stale plans and invalid assumptions are caught before they regress working code).
 - **Severity taxonomy** S1–S5 with orthogonal `Status` and `Tags`, and full **finding ↔ fix traceability**.
 - **Portable** — native adapters for Claude, OpenAI Codex / AGENTS.md, Cursor, Gemini, and GitHub Copilot; one methodology, one source of truth.
+- **Deep-research currency engine (Stage R)** — before judging, it autonomously decomposes its knowledge needs, runs iterative web searches, verifies sources, and synthesizes a cited **Research Brief**, so it audits against *current* standards and advisories, not memory.
 - **Self-auditing** — the framework is regularly run on itself; the trail lives in [`audits/`](audits/).
 
 ## Platforms
@@ -31,11 +32,12 @@ See [`adapters/README.md`](adapters/README.md) for the deployment matrix.
 ## Repository layout
 
 ```
-universal-audit-skill-v8.0.md   # the skill source — full methodology (single source of truth)
+universal-audit-skill-v9.0.md   # the skill source — full methodology (single source of truth)
 universal-audit-skill-lite.md   # condensed core for local / small-context models (defers to the full file)
 universal-audit-skill.skill     # installable Claude package (SKILL.md + eval set)
 AGENTS.md                       # universal adapter (open standard: Codex, Cursor, Gemini, Copilot, Windsurf, ...)
 adapters/                       # native entry points per platform (Cursor .mdc, Gemini, Copilot, Codex)
+research/                       # agent-agnostic deep-research currency engine (Stage R) + web-research sub-agent
 audits/                         # audit outputs: AUDIT-INDEX.md + AUDIT-RUN-* records
 skill-dev/                      # build & triggering artifacts (eval set, trigger tests, unpacked pkg)
 wiki/                           # documentation (source for the GitHub Wiki)
@@ -45,7 +47,7 @@ wiki/                           # documentation (source for the GitHub Wiki)
 
 **Install / deploy for your platform** from the table above (or [`adapters/README.md`](adapters/README.md)). It then triggers when you ask to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in something — even if you never say the word "audit." Audit outputs are written to `./audits/`.
 
-**Run as a prompt** (any agent). Paste `universal-audit-skill-v8.0.md` — or `universal-audit-skill-lite.md` on small-context / local models — into a session with (1) file read/write and (2) web search + page fetch. Fill the `<<...>>` placeholders (scope, artifact type(s), domain/regulatory context, audit depth, **audit output location**, objectives, materiality, assurance level) and run top-to-bottom. The agent selects which modules apply — it does not run all of them blindly.
+**Run as a prompt** (any agent). Paste `universal-audit-skill-v9.0.md` — or `universal-audit-skill-lite.md` on small-context / local models — into a session with (1) file read/write and (2) web search + page fetch. Fill the `<<...>>` placeholders (scope, artifact type(s), domain/regulatory context, audit depth, **audit output location**, objectives, materiality, assurance level) and run top-to-bottom. The agent selects which modules apply — it does not run all of them blindly.
 
 **Pick a depth.** `Lightweight | Standard | Deep` (default **Deep**); assurance is `Reasonable | Limited`.
 

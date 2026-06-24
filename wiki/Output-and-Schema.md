@@ -6,6 +6,7 @@ All audit artifacts are written to a dedicated **audit directory** — default *
 
 - **Audit record:** `audits/AUDIT-RUN-<NNN>-<YYYY-MM-DD>.md`
 - **Append-only index:** `audits/AUDIT-INDEX.md` — one row per run.
+- **Research Brief (Stage R):** `audits/AUDIT-RUN-<NNN>-research.md` — the cited current-knowledge brief; Stages C/E cite it for time-sensitive facts.
 
 Run numbers increment from the highest existing run in the audit directory.
 

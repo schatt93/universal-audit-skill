@@ -1,6 +1,6 @@
 # Platforms and Portability
 
-The audit methodology is platform-neutral and lives in one source of truth — **`universal-audit-skill-v8.0.md`** (full) and **`universal-audit-skill-lite.md`** (low-context). Thin **adapters** point each platform's native mechanism at it, so there is exactly one methodology to maintain.
+The audit methodology is platform-neutral and lives in one source of truth — **`universal-audit-skill-v9.0.md`** (full) and **`universal-audit-skill-lite.md`** (low-context). Thin **adapters** point each platform's native mechanism at it, so there is exactly one methodology to maintain.
 
 ## Deployment matrix
 

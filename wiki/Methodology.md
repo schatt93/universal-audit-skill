@@ -14,9 +14,10 @@
 
 These sit beneath the **ISO 19011:2018** auditing principles (integrity, fair presentation, due professional care, confidentiality, independence/objectivity, evidence-/risk-based approach).
 
-## The five stages (§3)
+## The stages (§3)
 
 - **Stage A — Scope, Inventory & Planning.** Build a manifest; classify artifact type(s); **select the applicable modules** (and record why each is included/excluded); confirm depth. Route each file by *content* (magic bytes), not extension.
+- **Stage R — Deep Research & Currency.** Decompose the audit's knowledge needs, run iterative fan-out web search (parallel sub-agents where available), verify sources adversarially, and synthesize a cited **Research Brief** — so the audit judges against *current* knowledge (Principle 1 made operational). Engine in `research/`.
 - **Stage B — Universal Passes.** Run **B1–B3 in both a constructive and an adversarial mode**; **B4** is a dedicated cross-cutting red-team pass.
 - **Stage C — Domain Modules.** Run only the selected modules (see **[[Module Reference]]**), scaled to depth.
 - **Stage D — Consolidation & Classification.** De-duplicate, classify severity, run a **false-positive pass**, and perform the **"Audit of the Audit"** (red-team your own audit). Prove coverage.

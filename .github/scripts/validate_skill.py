@@ -51,10 +51,11 @@ else:
         f"title={mt.group(1) if mt else None} meta={mm.group(1) if mm else None}")
 
 # --- 2) stages / passes / principles defined ---
-if set(re.findall(r"^###\s+Stage\s+([A-E])", t, re.M)) == set("ABCDE"):
-    ok("Stages A-E defined")
+_stages = set(re.findall(r"^###\s+Stage\s+([A-Z])", t, re.M))
+if set("ABCDE") <= _stages:
+    ok("Stages A-E defined" + (" + R (research)" if "R" in _stages else ""))
 else:
-    bad("Stages A-E defined")
+    bad("Stages A-E defined", str(sorted(_stages)))
 
 if set(re.findall(r"\*\*Pass\s+B(\d)", t)) == {"1", "2", "3", "4"}:
     ok("Passes B1-B4 defined")

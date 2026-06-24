@@ -1,0 +1,25 @@
+name: Bug or inconsistency
+description: An internal defect — broken cross-reference, schema mismatch, namespace gap, contradictory wording.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Location (file + section/line)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What's wrong
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. actual
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix (optional)

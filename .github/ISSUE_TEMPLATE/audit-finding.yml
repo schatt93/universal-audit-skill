@@ -1,0 +1,50 @@
+name: Audit finding
+description: Log a defect, risk, gap, or inconsistency found by — or in — the audit skill.
+title: "[Finding] "
+labels: ["audit-finding"]
+body:
+  - type: markdown
+    attributes:
+      value: "One finding per issue. Cite concrete evidence — findings without evidence get closed (Principle 3)."
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Per the §4 taxonomy.
+      options:
+        - "S1 — Critical (block)"
+        - "S2 — High"
+        - "S3 — Medium"
+        - "S4 — Low"
+        - "S5 — Info"
+    validations:
+      required: true
+  - type: input
+    id: module
+    attributes:
+      label: Module / Pass
+      placeholder: 'e.g. Module A (Security), Pass B3, §5 schema'
+  - type: input
+    id: location
+    attributes:
+      label: Location (file + section/line)
+      placeholder: 'e.g. universal-audit-skill-v7.4.md §0, line 21'
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Quote/reference plus, where relevant, an external source and its date.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested fix (optional)

@@ -1,0 +1,36 @@
+name: Stale standard / edition
+description: Report an out-of-date standard, edition, regulation, or date-stamped claim (Principle 1).
+title: "[Stale] "
+labels: ["stale-standard"]
+body:
+  - type: input
+    id: standard
+    attributes:
+      label: Standard / framework
+      placeholder: 'e.g. ISO 19011, OWASP Top 10, SR 11-7, NIST SP 800-61'
+    validations:
+      required: true
+  - type: input
+    id: current_text
+    attributes:
+      label: What the skill currently says
+      placeholder: 'e.g. "ISO 19011:2026"'
+    validations:
+      required: true
+  - type: input
+    id: correct
+    attributes:
+      label: Correct current edition / date
+      placeholder: 'e.g. "ISO 19011:2018"'
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Authoritative source (URL)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes (optional)

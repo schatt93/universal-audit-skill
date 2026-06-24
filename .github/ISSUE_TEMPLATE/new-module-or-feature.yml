@@ -1,0 +1,28 @@
+name: New module or enhancement
+description: Propose a new audit domain/module, or improve an existing one.
+title: "[Module] "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: domain
+    attributes:
+      label: Domain / artifact type
+      placeholder: 'e.g. Kubernetes manifests, OT/ICS, patent filings'
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it's needed / what it would check
+    validations:
+      required: true
+  - type: textarea
+    id: standards
+    attributes:
+      label: Standards / methods to cite
+      description: Named frameworks the module should validate against at runtime.
+  - type: input
+    id: code
+    attributes:
+      label: Proposed module code (optional)
+      placeholder: 'next free two-letter code, e.g. AR'

@@ -1,6 +1,6 @@
 # Universal Audit — Lite Edition (low-context / local models)
 
-> **This is an index + minimal operating core — NOT a replacement for the full spec.** The authoritative methodology (the detailed method, techniques, methods/standards, and edge cases for every stage, pass, and module) lives in **`universal-audit-skill-v9.0.md`**. The summaries below are deliberately compressed and **will omit specifics**. Whenever you are about to *execute* a stage, pass, or module — and context allows — **open the corresponding full section in the master and follow that**. Do not rely on the Lite text alone, or you will miss key instructions.
+> **This is an index + minimal operating core — NOT a replacement for the full spec.** The authoritative methodology (the detailed method, techniques, methods/standards, and edge cases for every stage, pass, and module) lives in **`universal-audit-skill-v10.0.md`**. The summaries below are deliberately compressed and **will omit specifics**. Whenever you are about to *execute* a stage, pass, or module — and context allows — **open the corresponding full section in the master and follow that**. Do not rely on the Lite text alone, or you will miss key instructions.
 
 ## Progressive disclosure — pull full detail on demand
 Load the **smallest relevant slice** of the master, use it, then release it and move on:
@@ -17,7 +17,7 @@ Load the **smallest relevant slice** of the master, use it, then release it and 
 | Standards to cite for a fix | Appendix — Standards & Methods Catalog |
 | Researching a current edition / advisory / CVE | **Stage R** + `research/research-workflow.md` |
 
-If you **cannot** open the master (no file, no fetch): say so, run only what this core supports, and tag anything you could not verify `UNVERIFIED` — never guess at the omitted detail. The master is at `universal-audit-skill-v9.0.md` or https://github.com/schatt93/universal-audit-skill .
+If you **cannot** open the master (no file, no fetch): say so, run only what this core supports, and tag anything you could not verify `UNVERIFIED` — never guess at the omitted detail. The master is at `universal-audit-skill-v10.0.md` or https://github.com/schatt93/universal-audit-skill .
 
 ## Running with little context
 - **Depth: Lightweight.** Work in **chunks** — one file / section / module at a time.
@@ -48,6 +48,9 @@ If you **cannot** open the master (no file, no fetch): say so, run only what thi
 - `Status` ∈ `Open | In-Review | Verified | Resolved`. `Tags` ∈ `OPEN-QUESTION | DECISION-REQUIRED | TOOL-UNAVAILABLE | UNVERIFIED`.
 - **Finding:** `Fn · Stage/Module · Location · Description · Evidence(+source/date) · Category · Severity · Impact · Likelihood · CVSS(sec) · OWASP-ref(AI) · Status · Tags · Resolved-by(Rn)`.
 - **Output:** `audits/AUDIT-RUN-<NNN>-<date>.md` + append a row to `audits/AUDIT-INDEX.md`.
+
+## Iterate to a clean pass (Ralph — master §10)
+Optionally loop **audit → fix → re-audit** until an *evidenced* pass: no open S1–S3, coverage proven, currency fresh, fixes independently re-verified. Guards: max-iterations, no-progress detection, **no false pass**, human checkpoints. Multi-vendor sub-agents (Auditor / Fixer / independent cross-vendor Verifier) read keys from the **`api-key-manager`** skill (env / git-ignored store) — never inline. Specs: `ralph/ralph-loop.md`, `ralph/multi-vendor-agents.md`.
 
 ## Module index (one-liners — load the full module from the master when selected)
 - **Group 1 (system & quality):** A Security · B Privacy · C UI/UX · D Accessibility · E Performance · F Reliability/SRE · G Code-quality · H Architecture · I API · J Data/Analytics · K AI/ML/LLM · L Test/QA · M Compatibility · N i18n/l10n · O Documentation · P SEO · Q Compliance · R Dependency/Supply-chain · S Infra/IaC · T Observability · U Cost/FinOps · V Brand/Design-system · W Governance.

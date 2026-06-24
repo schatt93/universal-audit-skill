@@ -13,3 +13,11 @@ desktop.ini
 # Python
 __pycache__/
 *.pyc
+
+# API key stores — never commit
+keys.env
+*.env
+!*.example.env
+.audit-keys*
+**/keys.env
+*.key

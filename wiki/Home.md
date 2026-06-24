@@ -32,4 +32,5 @@ Written in the spirit of **IEEE 1028** and the auditing principles of **ISO 1901
 - **Traceability** — every finding (`Fn`) links to the fix (`Rn`) that resolves it, and back.
 - **Portable** — runs on Claude, OpenAI Codex / AGENTS.md, Cursor, Gemini, and GitHub Copilot; a low-context **Lite** edition serves local / small-context models. See [[Platforms and Portability]].
 - **Ground-truth reconciliation (Principle 9)** — validates the artifact's own assumptions and baseline against the actual system, catching stale plans before they regress working code.
+- **Ralph loop & multi-vendor (§10)** — iterate audit→fix→re-audit to a clean, evidenced pass; drive it with sub-agents across model vendors (keys via the **api-key-manager** skill).
 - **Self-auditing** — the framework is regularly run on itself; the trail is in [`audits/`](https://github.com/schatt93/universal-audit-skill/tree/main/audits).

@@ -1,6 +1,6 @@
 # Adapters — deploy the auditor on any agentic platform
 
-The audit methodology lives in **one** place: [`../universal-audit-skill-v9.0.md`](../universal-audit-skill-v9.0.md) (full) and [`../universal-audit-skill-lite.md`](../universal-audit-skill-lite.md) (low-context). These adapters are thin entry points that point your agent at it — copy the one(s) for your platform into your target project.
+The audit methodology lives in **one** place: [`../universal-audit-skill-v10.0.md`](../universal-audit-skill-v10.0.md) (full) and [`../universal-audit-skill-lite.md`](../universal-audit-skill-lite.md) (low-context). These adapters are thin entry points that point your agent at it — copy the one(s) for your platform into your target project.
 
 | Platform | Use this | Place it at | Notes |
 |---|---|---|---|
@@ -17,3 +17,4 @@ Point the adapter at [`../universal-audit-skill-lite.md`](../universal-audit-ski
 
 *Adapter formats validated 2026-06-24 against each platform's current documentation.*
 **Currency (Stage R).** Before judging, run the deep-research loop — decompose the audit's knowledge needs, web-search and *verify* the current standards / advisories / CVEs / best practices, and cite them in a Research Brief; never judge a fast-moving artifact from memory. Engine: `research/research-workflow.md` + `research/web-researcher.md`.
+**Iterate to a clean pass (Ralph, §10).** Optionally loop audit→fix→re-audit until no open S1–S3 and coverage is proven (guards prevent infinite loops / false passes). Multi-vendor sub-agents — Auditor / Fixer / independent cross-vendor Verifier — read API keys from the `api-key-manager` skill (env / git-ignored store), never inline.

@@ -3,7 +3,7 @@ description: Universal Audit, Verification & Test — run a rigorous, evidence-b
 alwaysApply: false
 ---
 
-You are the **Universal Auditor**. When the user asks to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in a work product, follow the methodology in `universal-audit-skill-v9.0.md` (or `universal-audit-skill-lite.md` for small context) if present in the project; otherwise fetch it from https://github.com/schatt93/universal-audit-skill .
+You are the **Universal Auditor**. When the user asks to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in a work product, follow the methodology in `universal-audit-skill-v10.0.md` (or `universal-audit-skill-lite.md` for small context) if present in the project; otherwise fetch it from https://github.com/schatt93/universal-audit-skill .
 
 Core invariants:
 - Adversarial toward the *artifact*, not the author; evidence-or-it-didn't-happen.
@@ -15,3 +15,4 @@ Core invariants:
 
 Not for creating the artifact from scratch, routine edits/bug fixes, or casual factual questions.
 **Currency (Stage R).** Before judging, run the deep-research loop — decompose the audit's knowledge needs, web-search and *verify* the current standards / advisories / CVEs / best practices, and cite them in a Research Brief; never judge a fast-moving artifact from memory. Engine: `research/research-workflow.md` + `research/web-researcher.md`.
+**Iterate to a clean pass (Ralph, §10).** Optionally loop audit→fix→re-audit until no open S1–S3 and coverage is proven (guards prevent infinite loops / false passes). Multi-vendor sub-agents — Auditor / Fixer / independent cross-vendor Verifier — read API keys from the `api-key-manager` skill (env / git-ignored store), never inline.

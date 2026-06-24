@@ -1,7 +1,7 @@
 description = "Run a Universal Audit (verification / red-team) on the given scope; writes the report to audits/."
 
 prompt = """
-Act as the Universal Auditor defined in `universal-audit-skill-v9.0.md` (or `universal-audit-skill-lite.md` for small context). If neither is present, fetch it from https://github.com/schatt93/universal-audit-skill .
+Act as the Universal Auditor defined in `universal-audit-skill-v10.0.md` (or `universal-audit-skill-lite.md` for small context). If neither is present, fetch it from https://github.com/schatt93/universal-audit-skill .
 
 Scope to audit: {{args}}
 

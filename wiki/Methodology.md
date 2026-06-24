@@ -43,3 +43,6 @@ Risk = **Impact × Likelihood**, banded:
 - **S5 Info** — observation, no action.
 
 Two orthogonal fields accompany severity: **`Status`** ∈ `Open | In-Review | Verified | Resolved` and **`Tags`** ∈ `OPEN-QUESTION | DECISION-REQUIRED | TOOL-UNAVAILABLE | UNVERIFIED`. Security findings also carry a **CVSS** score; AI findings reference the relevant **OWASP LLM/Agentic** category.
+## Ralph loop & multi-vendor (master §10)
+
+The audit can run autonomously **in a loop** — audit → fix → re-audit — until an *evidenced* clean pass (no open S1–S3, coverage proven, currency fresh, every fix independently re-verified), with hard guards (max-iterations, no-progress detection, **no false pass**, human checkpoints). It can be driven by **sub-agents across multiple model vendors** (Auditor / Fixer / independent cross-vendor Verifier) whose API keys are managed by the **api-key-manager** skill (env vars or a git-ignored store) and read at runtime — never inlined or committed. Specs: `ralph/ralph-loop.md`, `ralph/multi-vendor-agents.md`.

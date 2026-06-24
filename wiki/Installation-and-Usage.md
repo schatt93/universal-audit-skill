@@ -1,6 +1,17 @@
 # Installation and Usage
 
-## Option A — install as a skill (Cowork / Claude Code)
+## Option A — install for your agentic platform
+
+| Platform | Entry point |
+|---|---|
+| **Claude / Claude Code** | `universal-audit-skill.skill` (install as a skill) |
+| **OpenAI Codex** + any AGENTS.md tool | `AGENTS.md` at the project root |
+| **Cursor** | `adapters/cursor/universal-audit.mdc` → `.cursor/rules/` |
+| **Gemini CLI** | `adapters/gemini/` (`GEMINI.md` + a `/audit` command) |
+| **GitHub Copilot** | `adapters/github-copilot/copilot-instructions.md` → `.github/` |
+| **Local / small-context models** | `universal-audit-skill-lite.md` (Lightweight depth, chunked) |
+
+See [[Platforms and Portability]] and `adapters/README.md`. For **Claude** specifically:
 
 1. Download `universal-audit-skill.skill` from the repository.
 2. Install it: in **Cowork**, use the *Save skill* button when the file is presented; in **Claude Code**, use your skill-install flow.
@@ -10,7 +21,7 @@ Audit outputs are written to a dedicated **`./audits/`** directory (created if a
 
 ## Option B — run as a prompt
 
-Paste `universal-audit-skill-v7.4.md` into a fresh agent session that has:
+Paste `universal-audit-skill-v8.0.md` (or `universal-audit-skill-lite.md` on small-context / local models) into a fresh agent session that has:
 
 1. **file read/write**, and
 2. **web search + page fetch** (needed for Principle 1 runtime validation).

@@ -2,6 +2,7 @@
 
 - [[Home]]
 - [[Installation and Usage]]
+- [[Platforms and Portability]]
 - [[Methodology]]
 - [[Module Reference]]
 - [[Output and Schema]]

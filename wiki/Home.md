@@ -30,4 +30,6 @@ Written in the spirit of **IEEE 1028** and the auditing principles of **ISO 1901
 - **Dual-mode passes** — each universal check runs *constructively* ("is it right?") **and** *adversarially* ("prove it wrong"); a claim that survives a real attempt to break it is far better evidenced.
 - **Runtime standards validation (Principle 1)** — editions, regulations, and defaults are treated as hypotheses and re-checked against authoritative sources, with the source + date recorded.
 - **Traceability** — every finding (`Fn`) links to the fix (`Rn`) that resolves it, and back.
+- **Portable** — runs on Claude, OpenAI Codex / AGENTS.md, Cursor, Gemini, and GitHub Copilot; a low-context **Lite** edition serves local / small-context models. See [[Platforms and Portability]].
+- **Ground-truth reconciliation (Principle 9)** — validates the artifact's own assumptions and baseline against the actual system, catching stale plans before they regress working code.
 - **Self-auditing** — the framework is regularly run on itself; the trail is in [`audits/`](https://github.com/schatt93/universal-audit-skill/tree/main/audits).

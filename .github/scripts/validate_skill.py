@@ -64,10 +64,10 @@ else:
 try:
     sec1 = t.split("## 1.")[1].split("## 2.")[0]
     principles = sorted({int(x) for x in re.findall(r"^(\d+)\.\s+\*\*", sec1, re.M)})
-    if principles == list(range(1, 9)):
-        ok("Principles 1-8 defined")
+    if principles and principles == list(range(1, len(principles) + 1)):
+        ok(f"Principles 1-{len(principles)} contiguous")
     else:
-        bad("Principles 1-8 defined", str(principles))
+        bad("Principles contiguous from 1", str(principles))
 except Exception as e:  # noqa: BLE001
     bad("Principles section parses", str(e))
 

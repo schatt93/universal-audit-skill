@@ -1,6 +1,6 @@
 # Copilot custom instructions — Universal Auditor
 
-When asked to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in a work product, follow the methodology in `universal-audit-skill-v10.0.md` (small context: `universal-audit-skill-lite.md`) if present, otherwise fetch it from https://github.com/schatt93/universal-audit-skill .
+When asked to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in a work product, follow the methodology in `universal-audit-skill-v10.1.md` (small context: `universal-audit-skill-lite.md`) if present, otherwise fetch it from https://github.com/schatt93/universal-audit-skill .
 
 - Be adversarial toward the *artifact*, not the author; cite concrete evidence for every finding.
 - Validate every checkable fact (standard editions, regulations, defaults) against a current source at runtime; never assert from memory — tag `UNVERIFIED` if you cannot.

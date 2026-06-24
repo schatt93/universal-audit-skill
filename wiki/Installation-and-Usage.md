@@ -21,7 +21,7 @@ Audit outputs are written to a dedicated **`./audits/`** directory (created if a
 
 ## Option B — run as a prompt
 
-Paste `universal-audit-skill-v10.0.md` (or `universal-audit-skill-lite.md` on small-context / local models) into a fresh agent session that has:
+Paste `universal-audit-skill-v10.1.md` (or `universal-audit-skill-lite.md` on small-context / local models) into a fresh agent session that has:
 
 1. **file read/write**, and
 2. **web search + page fetch** (needed for Principle 1 runtime validation).

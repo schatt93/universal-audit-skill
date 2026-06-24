@@ -33,14 +33,14 @@ See [`adapters/README.md`](adapters/README.md) for the deployment matrix.
 ## Repository layout
 
 ```
-universal-audit-skill-v10.0.md   # the skill source — full methodology (single source of truth)
+universal-audit-skill-v10.1.md   # the skill source — full methodology (single source of truth)
 universal-audit-skill-lite.md   # condensed core for local / small-context models (defers to the full file)
 universal-audit-skill.skill     # installable Claude package (SKILL.md + eval set)
 AGENTS.md                       # universal adapter (open standard: Codex, Cursor, Gemini, Copilot, Windsurf, ...)
 adapters/                       # native entry points per platform (Cursor .mdc, Gemini, Copilot, Codex)
 research/                       # deep-research currency engine (Stage R) + web-research sub-agent
 ralph/                          # Ralph loop (iterate to a clean pass) + multi-vendor sub-agent specs
-skills/api-key-manager/         # secure CRUD for multi-vendor API keys (used by the Ralph loop)
+skills/api-key-manager/         # secure CRUD for multi-vendor API keys (OS keyring or git-ignored store)
 audits/                         # audit outputs: AUDIT-INDEX.md + AUDIT-RUN-* records
 skill-dev/                      # build & triggering artifacts (eval set, trigger tests, unpacked pkg)
 wiki/                           # documentation (source for the GitHub Wiki)
@@ -50,7 +50,7 @@ wiki/                           # documentation (source for the GitHub Wiki)
 
 **Install / deploy for your platform** from the table above (or [`adapters/README.md`](adapters/README.md)). It then triggers when you ask to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in something — even if you never say the word "audit." Audit outputs are written to `./audits/`.
 
-**Run as a prompt** (any agent). Paste `universal-audit-skill-v10.0.md` — or `universal-audit-skill-lite.md` on small-context / local models — into a session with (1) file read/write and (2) web search + page fetch. Fill the `<<...>>` placeholders (scope, artifact type(s), domain/regulatory context, audit depth, **audit output location**, objectives, materiality, assurance level) and run top-to-bottom. The agent selects which modules apply — it does not run all of them blindly.
+**Run as a prompt** (any agent). Paste `universal-audit-skill-v10.1.md` — or `universal-audit-skill-lite.md` on small-context / local models — into a session with (1) file read/write and (2) web search + page fetch. Fill the `<<...>>` placeholders (scope, artifact type(s), domain/regulatory context, audit depth, **audit output location**, objectives, materiality, assurance level) and run top-to-bottom. The agent selects which modules apply — it does not run all of them blindly.
 
 **Pick a depth.** `Lightweight | Standard | Deep` (default **Deep**); assurance is `Reasonable | Limited`.
 

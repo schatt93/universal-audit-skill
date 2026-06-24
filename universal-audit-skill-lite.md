@@ -1,6 +1,6 @@
 # Universal Audit — Lite Edition (low-context / local models)
 
-> **This is an index + minimal operating core — NOT a replacement for the full spec.** The authoritative methodology (the detailed method, techniques, methods/standards, and edge cases for every stage, pass, and module) lives in **`universal-audit-skill-v10.0.md`**. The summaries below are deliberately compressed and **will omit specifics**. Whenever you are about to *execute* a stage, pass, or module — and context allows — **open the corresponding full section in the master and follow that**. Do not rely on the Lite text alone, or you will miss key instructions.
+> **This is an index + minimal operating core — NOT a replacement for the full spec.** The authoritative methodology (the detailed method, techniques, methods/standards, and edge cases for every stage, pass, and module) lives in **`universal-audit-skill-v10.1.md`**. The summaries below are deliberately compressed and **will omit specifics**. Whenever you are about to *execute* a stage, pass, or module — and context allows — **open the corresponding full section in the master and follow that**. Do not rely on the Lite text alone, or you will miss key instructions.
 
 ## Progressive disclosure — pull full detail on demand
 Load the **smallest relevant slice** of the master, use it, then release it and move on:
@@ -17,7 +17,7 @@ Load the **smallest relevant slice** of the master, use it, then release it and 
 | Standards to cite for a fix | Appendix — Standards & Methods Catalog |
 | Researching a current edition / advisory / CVE | **Stage R** + `research/research-workflow.md` |
 
-If you **cannot** open the master (no file, no fetch): say so, run only what this core supports, and tag anything you could not verify `UNVERIFIED` — never guess at the omitted detail. The master is at `universal-audit-skill-v10.0.md` or https://github.com/schatt93/universal-audit-skill .
+If you **cannot** open the master (no file, no fetch): say so, run only what this core supports, and tag anything you could not verify `UNVERIFIED` — never guess at the omitted detail. The master is at `universal-audit-skill-v10.1.md` or https://github.com/schatt93/universal-audit-skill .
 
 ## Running with little context
 - **Depth: Lightweight.** Work in **chunks** — one file / section / module at a time.

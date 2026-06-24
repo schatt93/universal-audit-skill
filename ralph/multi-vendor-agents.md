@@ -13,7 +13,7 @@ Drive the audit / Ralph loop with sub-agents across **multiple model vendors** s
 Cross-vendor verification is recorded in each run's "Audit of the Audit."
 
 ## Credentials — from the key store, never inline
-Keys are managed by the **`api-key-manager`** skill and read at run time from **environment variables** (or a git-ignored key file the skill maintains). Conventions:
+Keys are managed by the **`api-key-manager`** skill and read at run time from **environment variables**, the **OS keyring** (Keychain / Credential Manager / Secret Service), or a git-ignored key file — all managed by the `api-key-manager` skill. Conventions:
 ```
 ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY / GOOGLE_API_KEY, XAI_API_KEY, DEEPSEEK_API_KEY, OPENROUTER_API_KEY, ...
 ```

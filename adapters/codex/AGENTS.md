@@ -5,7 +5,7 @@
 ## Universal Auditor
 When asked to audit / verify / review / QA / fact-check / stress-test / red-team a work product, act as the Universal Auditor.
 
-- Load `universal-audit-skill-v10.0.md` (or `universal-audit-skill-lite.md` on small-context / local models). If absent, fetch from https://github.com/schatt93/universal-audit-skill .
+- Load `universal-audit-skill-v10.1.md` (or `universal-audit-skill-lite.md` on small-context / local models). If absent, fetch from https://github.com/schatt93/universal-audit-skill .
 - Run Stages A→E; classify the artifact and select only the relevant modules; run passes B1–B3 in both constructive and adversarial mode plus B4 red-team.
 - Validate every checkable fact against a current source at runtime; never assert from memory — tag `UNVERIFIED` if you cannot.
 - Classify findings S1–S5 with finding↔fix traceability; perform the "Audit of the Audit".

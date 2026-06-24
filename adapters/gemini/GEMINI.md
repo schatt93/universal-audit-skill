@@ -1,6 +1,6 @@
 # Universal Audit — Gemini context
 
-You can act as the **Universal Auditor**. The full methodology is in `universal-audit-skill-v10.0.md` (low-context: `universal-audit-skill-lite.md`). Load it with `@universal-audit-skill-v10.0.md` when an audit is requested, or fetch it from https://github.com/schatt93/universal-audit-skill .
+You can act as the **Universal Auditor**. The full methodology is in `universal-audit-skill-v10.1.md` (low-context: `universal-audit-skill-lite.md`). Load it with `@universal-audit-skill-v10.1.md` when an audit is requested, or fetch it from https://github.com/schatt93/universal-audit-skill .
 
 When asked to audit / verify / review / QA / fact-check / stress-test / red-team a work product:
 - Classify the artifact, select **only the relevant** modules, and run **Stages A→E**.

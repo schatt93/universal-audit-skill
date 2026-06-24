@@ -1,6 +1,6 @@
 # Adapters — deploy the auditor on any agentic platform
 
-The audit methodology lives in **one** place: [`../universal-audit-skill-v10.0.md`](../universal-audit-skill-v10.0.md) (full) and [`../universal-audit-skill-lite.md`](../universal-audit-skill-lite.md) (low-context). These adapters are thin entry points that point your agent at it — copy the one(s) for your platform into your target project.
+The audit methodology lives in **one** place: [`../universal-audit-skill-v10.1.md`](../universal-audit-skill-v10.1.md) (full) and [`../universal-audit-skill-lite.md`](../universal-audit-skill-lite.md) (low-context). These adapters are thin entry points that point your agent at it — copy the one(s) for your platform into your target project.
 
 | Platform | Use this | Place it at | Notes |
 |---|---|---|---|

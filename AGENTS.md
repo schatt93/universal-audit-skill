@@ -3,10 +3,10 @@
 > Open-standard agent instructions ([agents.md](https://agents.md)). Read by OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot, Windsurf, and other AGENTS.md-aware tools.
 
 ## What this is
-A portable **audit / verification / red-team** skill for coding agents. The authoritative spec is **`universal-audit-skill-v10.0.md`**; the condensed low-context version is **`universal-audit-skill-lite.md`**.
+A portable **audit / verification / red-team** skill for coding agents. The authoritative spec is **`universal-audit-skill-v10.1.md`**; the condensed low-context version is **`universal-audit-skill-lite.md`**.
 
 ## To run an audit (in any project)
-1. Load `universal-audit-skill-v10.0.md` — or `universal-audit-skill-lite.md` on small-context / local models.
+1. Load `universal-audit-skill-v10.1.md` — or `universal-audit-skill-lite.md` on small-context / local models.
 2. Fill its `<<…>>` inputs: scope, artifact type(s), depth, **audit output location**, objectives, materiality, assurance.
 3. Run **Stages A→E**. Classify the artifact and select **only the relevant modules**. Run universal passes B1–B3 in both a constructive and an adversarial mode, plus B4 red-team.
 4. **Validate every checkable fact** (editions, regulations, defaults) against a current source at runtime — never assert from memory; tag `UNVERIFIED` if you cannot.

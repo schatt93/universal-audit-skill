@@ -56,11 +56,27 @@ wiki/                           # documentation (source for the GitHub Wiki)
 
 **Outputs.** Each run writes `audits/AUDIT-RUN-<NNN>-<YYYY-MM-DD>.md` (header, manifest, findings, consolidation, *audit of the audit*, remediation plan, open questions, verification ledger) and appends one row to `audits/AUDIT-INDEX.md`. The audit directory is created if absent and is configurable in section 2.
 
+## Multi-vendor keys (optional — for the Ralph loop, §10)
+
+To drive the loop with sub-agents across model vendors, store each vendor's API key with the **`api-key-manager`** skill — in the **OS keyring** (preferred) or a git-ignored `600` file, never the repo, prompts, logs, or chat:
+
+```bash
+pip install keyring   # OS keyring backend: macOS Keychain / Windows Credential Manager / Linux Secret Service
+
+KM=skills/api-key-manager/scripts/keyman.py
+python $KM add OPENAI_API_KEY            # hidden prompt (or: --from-env VAR); also ANTHROPIC_API_KEY, GEMINI_API_KEY, ...
+python $KM list                          # names + masked values
+python $KM backend                       # show the active store (keyring | file)
+eval "$(python $KM export-env)"          # load keys into this shell for the sub-agents (no values printed)
+```
+
+A missing key just skips that vendor. See [`skills/api-key-manager/SKILL.md`](skills/api-key-manager/SKILL.md).
+
 ## How it is maintained
 
 The skill is maintained **by auditing itself** — the discipline it preaches, it practices.
 
-- **Self-audit trail.** Every substantive change is driven by a recorded run in [`audits/`](audits/): e.g. `AUDIT-RUN-006` (internal consistency), `AUDIT-RUN-007` (financial-category coverage gap -> new Module AQ), `AUDIT-RUN-008` (knowledge/instruction correctness + standards staleness), `AUDIT-RUN-009` (multi-platform + low-context + Principle 9), and `AUDIT-RUN-010` (fresh full self-audit). Findings carry IDs (`Fn`), fixes carry IDs (`Rn`), and `AUDIT-INDEX.md` is an append-only log of every run.
+- **Self-audit trail.** Every substantive change is driven by a recorded run in [`audits/`](audits/): e.g. `AUDIT-RUN-006` (internal consistency), `AUDIT-RUN-007` (financial-category coverage gap -> new Module AQ), `AUDIT-RUN-008` (knowledge/instruction correctness + standards staleness), `AUDIT-RUN-009` (multi-platform + low-context + Principle 9), `AUDIT-RUN-010` (fresh full self-audit), and `AUDIT-RUN-011`–`013` (deep-research engine → Ralph loop + multi-vendor → OS-keyring key store). Findings carry IDs (`Fn`), fixes carry IDs (`Rn`), and `AUDIT-INDEX.md` is an append-only log of every run.
 - **Runtime standards validation (Principle 1).** Named standards and editions are re-validated against authoritative sources and corrected when stale.
 - **Ground-truth reconciliation (Principle 9).** The skill verifies an artifact's stated preconditions and baseline against the *actual* system — added from live-test feedback where a stale plan's invalid baseline risked regressing working code.
 - **Versioned & changelogged.** The master file carries a version, supersede note, and changelog; each substantive change bumps the version and repackages `universal-audit-skill.skill`. CI (`.github/workflows/validate.yml`) enforces structural integrity.

@@ -1,4 +1,4 @@
-# Trigger Test — universal-audit-skill description (2026-06-23)
+# Trigger Test — universal-audit-skill description (2026-06-24)
 
 **Why this method.** The bundled optimizer (`scripts/run_loop.py` → `claude -p`) couldn't run in
 this sandbox — the `claude` CLI is present (v2.1.181) but **not logged in**, and no `ANTHROPIC_API_KEY`

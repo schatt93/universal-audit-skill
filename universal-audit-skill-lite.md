@@ -48,4 +48,9 @@ If you **cannot** open the master (no file, no fetch): say so, run only what thi
 - **Output:** `audits/AUDIT-RUN-<NNN>-<date>.md` + append a row to `audits/AUDIT-INDEX.md`.
 
 ## Module index (one-liners — load the full module from the master when selected)
-- **Group 1 (system & quality):** A Security · B Privacy · C UI/UX · D Accessibility · E Performance · F Reliability/SRE · G Code-quality · H Architecture · I API · J Data/Analytics · K AI/ML/L
+- **Group 1 (system & quality):** A Security · B Privacy · C UI/UX · D Accessibility · E Performance · F Reliability/SRE · G Code-quality · H Architecture · I API · J Data/Analytics · K AI/ML/LLM · L Test/QA · M Compatibility · N i18n/l10n · O Documentation · P SEO · Q Compliance · R Dependency/Supply-chain · S Infra/IaC · T Observability · U Cost/FinOps · V Brand/Design-system · W Governance.
+- **Group 2 (file/asset — run X & Y on any file):** X Integrity/Format · Y Metadata/Provenance · Z Image · AA Audio · AB Video · AC 3D/CAD · AD Archives/Binaries · AE Specialized (geospatial/medical/fonts/e-books).
+- **Group 3 (specialized professional):** AF Financial/SOX · AG Hardware/Firmware/Safety-critical · AH Scientific/Research-data · AJ Legal/Contract · AK ESG · AL Smart-contract · AM Model-risk · AN Medical-device · AO Security-ops/Forensics · AP Quality-management · AQ Investment-research/Market-analysis. *(Module code `AI` is intentionally skipped — collides with Module K.)*
+
+---
+*Lite edition of the Universal Audit skill · MIT © 2026 Shubhajit Chatterjee ([@schatt93](https://github.com/schatt93)) · coding & research partner: Claude.*

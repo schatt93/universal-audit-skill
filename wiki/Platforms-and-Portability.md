@@ -20,4 +20,4 @@ The audit methodology is platform-neutral and lives in one source of truth — *
 
 Use [`universal-audit-skill-lite.md`](https://github.com/schatt93/universal-audit-skill/blob/main/universal-audit-skill-lite.md) — an index + minimal operating core that **defers to the full spec for detail**. Run at **Lightweight** depth, audit **one module / section at a time**, and persist the findings ledger to `audits/` between chunks so context can be released. The Lite edition maps each task to the exact master section (§1 principles, §3 stage/pass, Stage C module, §4–§5 schema, Appendix standards) to pull on demand — so small models don't miss key instructions by relying on the summary alone.
 
-*Adapter formats validated 2026-06-23 against each platform's current documentation.*
+*Adapter formats validated 2026-06-24 against each platform's current documentation.*

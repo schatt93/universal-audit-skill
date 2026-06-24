@@ -10,6 +10,8 @@ The framework is maintained **by auditing itself** — the discipline it preache
 | **006** | Internal consistency (Pass B3) | 5 findings (title version, module range, dual-mode scope, schema gap, naming) → **R01–R05**, applied in v7.2 |
 | **007** | Financial-category coverage gap (Pass B2) | Found no home for investment-research/market-analysis content → **new Module AQ** (v7.2) |
 | **008** | Consistency + knowledge + instruction + **staleness** | Validated 13 standards live; corrected `ISO 19011` edition, refreshed **SR 26-2** and **NIST 800-61 r3** → **R07–R11**, applied in v7.3 |
+| **009** | Multi-platform + low-context + Principle 9 | Ground-truth gap from live feedback → **Principle 9**, the **Lite** edition, and platform adapters (Codex/AGENTS.md, Cursor, Gemini, Copilot); description trimmed → **v8.0** |
+| **010** | Fresh full self-audit | Caught a systematic **date error** (records dated a day early) + doc-trail lag → corrected; v8.0 otherwise confirmed clean |
 
 Findings carry IDs (`Fn`), fixes carry IDs (`Rn`), and `AUDIT-INDEX.md` is an append-only log of every run.
 

@@ -34,7 +34,7 @@ See [`adapters/README.md`](adapters/README.md) for the deployment matrix.
 universal-audit-skill-v8.0.md   # the skill source — full methodology (single source of truth)
 universal-audit-skill-lite.md   # condensed core for local / small-context models (defers to the full file)
 universal-audit-skill.skill     # installable Claude package (SKILL.md + eval set)
-AGENTS.md                       # universal adapter (open standard: Codex, Cursor, Gemini, Copilot, Windsurf, …)
+AGENTS.md                       # universal adapter (open standard: Codex, Cursor, Gemini, Copilot, Windsurf, ...)
 adapters/                       # native entry points per platform (Cursor .mdc, Gemini, Copilot, Codex)
 audits/                         # audit outputs: AUDIT-INDEX.md + AUDIT-RUN-* records
 skill-dev/                      # build & triggering artifacts (eval set, trigger tests, unpacked pkg)
@@ -45,15 +45,36 @@ wiki/                           # documentation (source for the GitHub Wiki)
 
 **Install / deploy for your platform** from the table above (or [`adapters/README.md`](adapters/README.md)). It then triggers when you ask to audit, verify, review, QA, fact-check, stress-test, red-team, or find defects / gaps / inconsistencies in something — even if you never say the word "audit." Audit outputs are written to `./audits/`.
 
-**Run as a prompt** (any agent). Paste `universal-audit-skill-v8.0.md` — or `universal-audit-skill-lite.md` on small-context / local models — into a session with (1) file read/write and (2) web search + page fetch. Fill the `<<…>>` placeholders (scope, artifact type(s), domain/regulatory context, audit depth, **audit output location**, objectives, materiality, assurance level) and run top-to-bottom. The agent selects which modules apply — it does not run all of them blindly.
+**Run as a prompt** (any agent). Paste `universal-audit-skill-v8.0.md` — or `universal-audit-skill-lite.md` on small-context / local models — into a session with (1) file read/write and (2) web search + page fetch. Fill the `<<...>>` placeholders (scope, artifact type(s), domain/regulatory context, audit depth, **audit output location**, objectives, materiality, assurance level) and run top-to-bottom. The agent selects which modules apply — it does not run all of them blindly.
 
 **Pick a depth.** `Lightweight | Standard | Deep` (default **Deep**); assurance is `Reasonable | Limited`.
 
-**Outputs.** Each run writes `audits/AUDIT-RUN-<NNN>-<YYYY-MM-DD>.md` (header · manifest · findings · consolidation · *audit of the audit* · remediation plan · open questions · verification ledger) and appends one row to `audits/AUDIT-INDEX.md`. The audit directory is created if absent and is configurable in §2.
+**Outputs.** Each run writes `audits/AUDIT-RUN-<NNN>-<YYYY-MM-DD>.md` (header, manifest, findings, consolidation, *audit of the audit*, remediation plan, open questions, verification ledger) and appends one row to `audits/AUDIT-INDEX.md`. The audit directory is created if absent and is configurable in section 2.
 
 ## How it is maintained
 
 The skill is maintained **by auditing itself** — the discipline it preaches, it practices.
 
-- **Self-audit trail.** Every substantive change is driven by a recorded run in [`audits/`](audits/): e.g. `AUDIT-RUN-006` (internal consistency), `AUDIT-RUN-007` (financial-category coverage gap → new Module AQ), `AUDIT-RUN-008` (knowledge/instruction correctness + standards staleness). Findings carry IDs (`Fn`), fixes carry IDs (`Rn`), and `AUDIT-INDEX.md` is an append-only log of every run.
-- **Runtime standards validation (Principle 1
+- **Self-audit trail.** Every substantive change is driven by a recorded run in [`audits/`](audits/): e.g. `AUDIT-RUN-006` (internal consistency), `AUDIT-RUN-007` (financial-category coverage gap -> new Module AQ), `AUDIT-RUN-008` (knowledge/instruction correctness + standards staleness), `AUDIT-RUN-009` (multi-platform + low-context + Principle 9), and `AUDIT-RUN-010` (fresh full self-audit). Findings carry IDs (`Fn`), fixes carry IDs (`Rn`), and `AUDIT-INDEX.md` is an append-only log of every run.
+- **Runtime standards validation (Principle 1).** Named standards and editions are re-validated against authoritative sources and corrected when stale.
+- **Ground-truth reconciliation (Principle 9).** The skill verifies an artifact's stated preconditions and baseline against the *actual* system — added from live-test feedback where a stale plan's invalid baseline risked regressing working code.
+- **Versioned & changelogged.** The master file carries a version, supersede note, and changelog; each substantive change bumps the version and repackages `universal-audit-skill.skill`. CI (`.github/workflows/validate.yml`) enforces structural integrity.
+- **Trigger tuning.** The skill's `description` is evaluated against `skill-dev/trigger-evals.json` and tuned (see `skill-dev/TRIGGER-TEST-*.md`).
+
+### Update workflow
+
+1. Run the skill on itself (or your target) -> a new `audits/AUDIT-RUN-<NNN>`.
+2. Apply remediations; bump the version + changelog in the master `.md`.
+3. Rebuild `SKILL.md` and repackage `universal-audit-skill.skill`.
+4. Append the run to `audits/AUDIT-INDEX.md`.
+
+## Authors & credits
+
+- **Architect & lead author** — **Shubhajit Chatterjee** ([@schatt93](https://github.com/schatt93))
+- **Coding & research partner** — **Claude** (Anthropic)
+
+This framework was architected and authored by **Shubhajit Chatterjee**, with **Claude** as an AI **coding & research partner** — co-drafting the modules, running the self-audits in [`audits/`](audits/), validating standards against current sources (Principle 1), and packaging the skill. Commits are co-attributed with `Co-authored-by: Claude`.
+
+## License
+
+Released under the **MIT License**, © 2026 Shubhajit Chatterjee ([@schatt93](https://github.com/schatt93)) — see [LICENSE](LICENSE).

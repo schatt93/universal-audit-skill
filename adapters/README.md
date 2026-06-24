@@ -15,4 +15,4 @@ Every adapter references the master file as the single source of truth, so there
 ## Local / small-context models
 Point the adapter at [`../universal-audit-skill-lite.md`](../universal-audit-skill-lite.md) instead of the full file, run at **Lightweight** depth, and audit **one module / section at a time**, persisting the findings ledger to `audits/` between chunks so context can be released. See the master's *"Low-context & local models"* note.
 
-*Adapter formats validated 2026-06-23 against each platform's current documentation.*
+*Adapter formats validated 2026-06-24 against each platform's current documentation.*

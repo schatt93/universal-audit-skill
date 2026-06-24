@@ -52,6 +52,13 @@ The skill is maintained **by auditing itself** — the discipline it preaches, i
 3. Rebuild `SKILL.md` and repackage `universal-audit-skill.skill`.
 4. Append the run to `audits/AUDIT-INDEX.md`.
 
+## Authors & credits
+
+- **Architect & lead author** — **Shubhajit Chatterjee** ([@schatt93](https://github.com/schatt93))
+- **Coding & research partner** — **Claude** (Anthropic)
+
+This framework was architected and authored by **Shubhajit Chatterjee**, with **Claude** as an AI **coding & research partner** — co-drafting the modules, running the self-audits in [`audits/`](audits/), validating standards against current sources (Principle 1), and packaging the skill. Commits are co-attributed with `Co-authored-by: Claude`.
+
 ## License
 
-Released under the **MIT License** — see [LICENSE](LICENSE).
+Released under the **MIT License**, © 2026 Shubhajit Chatterjee ([@schatt93](https://github.com/schatt93)) — see [LICENSE](LICENSE).
